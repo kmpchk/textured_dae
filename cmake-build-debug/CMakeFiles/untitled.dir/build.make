@@ -252,6 +252,7 @@ untitled: /usr/lib/x86_64-linux-gnu/libGLU.so
 untitled: /usr/lib/x86_64-linux-gnu/libglut.so
 untitled: /usr/lib/x86_64-linux-gnu/libXmu.so
 untitled: /usr/lib/x86_64-linux-gnu/libXi.so
+untitled: /usr/lib/x86_64-linux-gnu/libGLEW.so
 untitled: CMakeFiles/untitled.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/optio32/CLionProjects/untitled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable untitled"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled.dir/link.txt --verbose=$(VERBOSE)

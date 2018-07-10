@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/optio32/CLionProjects/untitled/Mesh.cpp
+GL/glew.h
+-
 Mesh.h
 /home/optio32/CLionProjects/untitled/Mesh.h
 
@@ -115,6 +117,8 @@ GL/freeglut.h
 -
 ModelLoader.h
 /home/optio32/CLionProjects/untitled/ModelLoader.h
+TextureLoader.h
+/home/optio32/CLionProjects/untitled/TextureLoader.h
 
 /home/optio32/CLionProjects/untitled/math_3d.h
 Vector3f.h

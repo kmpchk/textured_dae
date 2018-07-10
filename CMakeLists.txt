@@ -7,6 +7,7 @@ find_package(Assimp REQUIRED)
 find_package(ImageMagick COMPONENTS Magick++ REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
+find_package(GLEW REQUIRED)
 
 if(Assimp_FOUND)
 include_directories(${Assimp_INCLUDE_DIRS})
@@ -17,6 +18,7 @@ include_directories(${ImageMagick_INCLUDE_DIRS})
 endif()
 
 include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
+include_directories(${GLEW_INCLUDE_DIRS})
 
 add_executable(untitled main.cpp ModelLoader.h ModelLoader.cpp TextureLoader.h TextureLoader.cpp math_3d.h Mesh.cpp Mesh.h Vector3f.cpp Vector3f.h Vector2f.cpp Vector2f.h Utils.cpp Utils.h)
 
@@ -29,3 +31,4 @@ target_link_libraries(untitled ${ImageMagick_LIBRARIES})
 endif()
 
 target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
+target_link_libraries(${PROJECT_NAME} ${GLEW_LIBRARY})

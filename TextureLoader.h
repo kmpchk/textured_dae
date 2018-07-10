@@ -13,7 +13,13 @@ class TextureLoader
 {
 public:
     TextureLoader(char* texture_filename);
+    ~TextureLoader();
     bool Load();
+    bool SaveBytesToFile(char* output_filename, void* bytes, size_t size);
+    bool SaveBytesToFile(char* output_filename);
+    bool LoadToGL();
+    void PrintImageInfo();
+    void CalculateGazeboImageSize();
 
 private:
     Magick::Image* _pImage = NULL;

@@ -8,6 +8,7 @@
 #include <glm/glm.hpp>
 #include <GL/freeglut.h>
 #include "ModelLoader.h"
+#include "TextureLoader.h"
 
 int main(int argc, char** argv)
 {
@@ -35,8 +36,15 @@ int main(int argc, char** argv)
     glutMainLoop();*/
 
     Model* model = new Model();
-    model->loadModel(argv[1]);
+    model->load(argv[1]);
     model->printfModelInfo();
+
+    //delete model;
+
+    //TextureLoader* tloader = new TextureLoader("input.png");
+    //tloader->Load();
+    //tloader->SaveBytesToFile()
+    //tloader->PrintImageInfo();
 
     //printf("input model:= %s\n", argv[1]);
 

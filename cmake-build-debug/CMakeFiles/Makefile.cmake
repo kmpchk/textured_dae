@@ -24,6 +24,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU-C.cmake"
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake"
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU.cmake"
+  "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/FindGLEW.cmake"
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/FindGLUT.cmake"
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/FindImageMagick.cmake"
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/FindOpenGL.cmake"
@@ -36,6 +37,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/Platform/Linux.cmake"
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/Platform/UnixPaths.cmake"
   "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/ProcessorCount.cmake"
+  "/opt/clion-2018.1.5/bin/cmake/share/cmake-3.10/Modules/SelectLibraryConfigurations.cmake"
   "/usr/local/lib/cmake/assimp-4.1/assimp-config-version.cmake"
   "/usr/local/lib/cmake/assimp-4.1/assimp-config.cmake"
   )

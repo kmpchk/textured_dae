@@ -14,8 +14,6 @@
 #include <GL/glew.h>
 #include "Mesh.h"
 
-//void ModelLoad(char* model_filename);
-
 class Model
 {
     std::vector<Mesh> _meshes;
@@ -24,7 +22,10 @@ class Model
 
 public:
 
-    void loadModel(const std::string& path);
+    Model();
+    ~Model();
+
+    void load(const std::string& path);
 
     void printfModelInfo();
 

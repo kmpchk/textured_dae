@@ -11,7 +11,10 @@
 #include <glm/vec3.hpp>
 #include "Utils.h"
 
-void Model::loadModel(const std::string& path)
+Model::Model() {}
+Model::~Model() {}
+
+void Model::load(const std::string& path)
 {
     Assimp::Importer importer;
     const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_JoinIdenticalVertices | aiProcess_GenNormals);
@@ -78,10 +81,11 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
     if(mesh->mMaterialIndex >= 0){
         aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
 
+        // Diffuse map
         std::vector<Texture> diffuseMaps = loadMaterialTextures( material, aiTextureType_DIFFUSE, "texture_diffuse" );
         textures.insert( textures.end( ), diffuseMaps.begin( ), diffuseMaps.end( ) );
 
-        // 2. Specular maps
+        // Specular maps
         std::vector<Texture> specularMaps = loadMaterialTextures( material, aiTextureType_SPECULAR, "texture_specular" );
         textures.insert( textures.end( ), specularMaps.begin( ), specularMaps.end( ) );
     }
@@ -109,13 +113,16 @@ std::vector<Texture> Model::loadMaterialTextures(aiMaterial* mat, aiTextureType 
 
 void Model::printfModelInfo()
 {
-    printf("meshes size:= %d\n", _meshes.size());
-    printf("mat size:= %d\n", _meshes[0]._textures.size());
     for (int i = 0; i < _meshes[0]._vertices.size(); ++i)
     {
         Vertex* f = &_meshes[0]._vertices[i];
         printf("U:= %g V:= %g\n", f->uvCoordinate.x, f->uvCoordinate.y);
     }
+    printf("meshes count:= %d\n", _meshes.size());
+    //printf("textures count:= %d\n", _meshes[0]._textures.size());
+    //printf("%s\n", _meshes[0]._textures[0].path.C_Str());
+    //printf("name:= %s\n", _modelName.c_str());
+    //printf("directory:= %s\n", _directory.c_str());
     //printf("vert:= %d\n", _meshes[0]._vertices.size());
 }
 

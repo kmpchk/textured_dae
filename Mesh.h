@@ -30,9 +30,14 @@ public:
     std::vector<unsigned>  _indices;
     std::vector<Texture> _textures;
 
-    Mesh(std::vector<Vertex> vertices, std::vector<unsigned> indices, std::vector<Texture> textures);
+    Mesh(std::vector<Vertex>& vertices, std::vector<unsigned>& indices, std::vector<Texture>& textures);
 
     ~Mesh();
+    //void Draw(const Shader& shader);
+
+private:
+    unsigned int VAO, VBO, EBO;
+    void setupMesh();
 
 };
 

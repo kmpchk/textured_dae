@@ -24,3 +24,20 @@ std::string getFileName(const std::string& s)
 
     return ("");
 }
+
+STATUS readFile(char* fileName, void* buffer)
+{
+    FILE* file = fopen(fileName, "r");
+    if(file == NULL) return STATUS_FAIL;
+    fseek(file, 0, SEEK_END);
+    size_t fileSize = ftell(file);
+    fseek(file, 0, SEEK_SET);
+    buffer = new char[fileSize];
+    size_t readedBytes = fread(buffer, fileSize, 1, file);
+    if(readedBytes != 1)
+    {
+        fclose(file);
+        return STATUS_FAIL;
+    }
+    return STATUS_SUCCESS;
+}
